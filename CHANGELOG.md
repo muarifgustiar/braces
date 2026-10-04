@@ -32,6 +32,12 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [Unreleased]
+
+### Security
+
+- **Fixed**: recursive AST walkers (`compile`, `expand`, `stringify`) and the `flatten`/`append` helpers now use iterative, stack-safe implementations, so deeply nested brace patterns under the maximum length limit can no longer exhaust the call stack and crash the process with an uncaught `RangeError` (CVE-2026-93687).
+
 ## [3.0.0] - 2018-04-08
 
 v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer deps, and a more accurate parser and compiler.
