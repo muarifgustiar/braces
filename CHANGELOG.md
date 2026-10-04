@@ -32,7 +32,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
-## [Unreleased]
+## [3.0.4] - 2026-10-04
 
 ### Security
 
@@ -187,5 +187,6 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 [1.0.0]: https://github.com/micromatch/braces/compare/0.1.4...1.0.0
 [0.1.4]: https://github.com/micromatch/braces/compare/0.1.0...0.1.4
 
-[Unreleased]: https://github.com/micromatch/braces/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/muarifgustiar/braces/compare/3.0.4...HEAD
+[3.0.4]: https://github.com/muarifgustiar/braces/compare/3.0.3...3.0.4
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
