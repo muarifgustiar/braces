@@ -14,13 +14,15 @@ const cycle = (e, newline) => {
   process.stdout.write(`\u001b[G  ${e.target}${newline ? '\n' : ''}`);
 };
 
+const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 const bench = (name, options) => {
   const config = { name, ...options };
   const suite = new Suite(config);
   const add = suite.add.bind(suite);
   suite.on('error', console.error);
 
-  if (argv.run && !new RegExp(argv.run).test(name)) {
+  if (argv.run && !new RegExp(escapeRegex(argv.run)).test(name)) {
     suite.add = () => suite;
     return suite;
   }
